@@ -12,7 +12,13 @@ public class EjemploConsumer {
         Consumer<String> consumer = (parametro) -> {
             System.out.println(parametro);
         };
-
         consumer.accept("Santiago");
+
+        Consumer<String> consumer2 = (parametro) -> System.out.println(parametro);
+        consumer2.accept("Daniel");
+
+        Consumer<String> consumer3 = System.out::println;
+        consumer3.accept("Flor");
+
     }
 }
